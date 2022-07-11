@@ -19,7 +19,7 @@ int main()
 
 	flag = jump | walk | crouch; // 0000 0001 | 0000 0100 | 0000 0010 = 0000 0111
 	
-	if(flag & (walk | crouch)) // 0000 0111 & 0000 0110 = 0000 0110
+	if((flag & (walk | crouch)) == (walk | crouch)) // 0000 0111 & 0000 0110 = 0000 0110
 	{
 		std::cout << "walking while crouched";
 	}
